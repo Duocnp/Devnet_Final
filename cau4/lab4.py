@@ -13,6 +13,8 @@ def get_org():
     response= requests.get(url,headers=header,verify=False)
     data=response.json()
     parse_data=json.dumps(data,indent=4)
+
+    print(parse_data)
     # print(data)
     # print(type(data))
     device_null=[]
