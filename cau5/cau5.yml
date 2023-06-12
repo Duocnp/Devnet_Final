@@ -1,6 +1,6 @@
 ---
 - name: Configure R1
-  hosts: R1
+  hosts: Duoc_lab_R1
   gather_facts: no
 
   tasks:
