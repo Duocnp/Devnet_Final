@@ -1,0 +1,18 @@
+image: centos:centos7.9.2009
+stages:
+  - deploy to test
+
+deploy to test:
+  stage: deploy to test
+  tags:
+          - duoc-runner
+  image: centos:centos7.9.2009
+  script:
+          - yum update -y
+          - yum install -y epel-release
+          - yum install ansible -y
+          - yum install -y python3
+          - cp -rf * /etc/ansible
+          - cd /etc/ansible
+          - ansible-playbook cau5.yml
+
